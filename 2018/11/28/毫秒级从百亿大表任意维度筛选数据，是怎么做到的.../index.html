@@ -123,7 +123,7 @@
 
 
 
-  <meta name="keywords" content="js,闭包,">
+  <meta name="keywords" content="系统架构,云栖社区,">
 
 
 
@@ -134,18 +134,21 @@
 
 
 
-<meta name="description" content="javascripthttps://www.cnblogs.com/cxying93/p/6103375.html 什么是闭包？闭包的优缺点？闭包（closure）是javascript的一大难点，也是它的特色。很多高级应用都要依靠闭包来实现。 1、变量作用域 要理解闭包，首先要理解javascript的特殊的变量作用域。 变量的作用域无非就两种：全局变量和局部变量。 javascript语言的特">
-<meta name="keywords" content="js,闭包">
+<meta name="description" content="转载自https://www.jianshu.com/p/47408eb7e6e3【只阅读学习，请勿它用】 1、业务背景随着闲鱼业务的发展，用户规模达到数亿级，用户维度的数据指标，达到上百个之多。如何从亿级别的数据中，快速筛选出符合期望的用户人群，进行精细化人群运营，是技术需要解决的问题。业界的很多方案常常需要分钟级甚至小时级才能生成查询结果。本文提供了一种解决大数据场景下的高效数据筛选、统计和分">
+<meta name="keywords" content="系统架构,云栖社区">
 <meta property="og:type" content="article">
-<meta property="og:title" content="什么是闭包？闭包的优缺点">
-<meta property="og:url" content="http://sangmu.wewithwe.com/2018/11/27/闭包/index.html">
+<meta property="og:title" content="毫秒级从百亿大表任意维度筛选数据，是怎么做到的...">
+<meta property="og:url" content="http://sangmu.wewithwe.com/2018/11/28/毫秒级从百亿大表任意维度筛选数据，是怎么做到的.../index.html">
 <meta property="og:site_name" content="隐久">
-<meta property="og:description" content="javascripthttps://www.cnblogs.com/cxying93/p/6103375.html 什么是闭包？闭包的优缺点？闭包（closure）是javascript的一大难点，也是它的特色。很多高级应用都要依靠闭包来实现。 1、变量作用域 要理解闭包，首先要理解javascript的特殊的变量作用域。 变量的作用域无非就两种：全局变量和局部变量。 javascript语言的特">
+<meta property="og:description" content="转载自https://www.jianshu.com/p/47408eb7e6e3【只阅读学习，请勿它用】 1、业务背景随着闲鱼业务的发展，用户规模达到数亿级，用户维度的数据指标，达到上百个之多。如何从亿级别的数据中，快速筛选出符合期望的用户人群，进行精细化人群运营，是技术需要解决的问题。业界的很多方案常常需要分钟级甚至小时级才能生成查询结果。本文提供了一种解决大数据场景下的高效数据筛选、统计和分">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-28T05:49:16.269Z">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2509688-4c9f37321de88f2a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2509688-9b26c7f570b62508.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:updated_time" content="2018-11-28T10:46:52.402Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="什么是闭包？闭包的优缺点">
-<meta name="twitter:description" content="javascripthttps://www.cnblogs.com/cxying93/p/6103375.html 什么是闭包？闭包的优缺点？闭包（closure）是javascript的一大难点，也是它的特色。很多高级应用都要依靠闭包来实现。 1、变量作用域 要理解闭包，首先要理解javascript的特殊的变量作用域。 变量的作用域无非就两种：全局变量和局部变量。 javascript语言的特">
+<meta name="twitter:title" content="毫秒级从百亿大表任意维度筛选数据，是怎么做到的...">
+<meta name="twitter:description" content="转载自https://www.jianshu.com/p/47408eb7e6e3【只阅读学习，请勿它用】 1、业务背景随着闲鱼业务的发展，用户规模达到数亿级，用户维度的数据指标，达到上百个之多。如何从亿级别的数据中，快速筛选出符合期望的用户人群，进行精细化人群运营，是技术需要解决的问题。业界的很多方案常常需要分钟级甚至小时级才能生成查询结果。本文提供了一种解决大数据场景下的高效数据筛选、统计和分">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2509688-4c9f37321de88f2a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
 
 
 
@@ -175,13 +178,13 @@
 
 
 
-  <link rel="canonical" href="http://sangmu.wewithwe.com/2018/11/27/闭包/">
+  <link rel="canonical" href="http://sangmu.wewithwe.com/2018/11/28/毫秒级从百亿大表任意维度筛选数据，是怎么做到的.../">
 
 
 
 
 
-  <title>什么是闭包？闭包的优缺点 | 隐久</title>
+  <title>毫秒级从百亿大表任意维度筛选数据，是怎么做到的... | 隐久</title>
   
 
 
@@ -337,7 +340,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://sangmu.wewithwe.com/2018/11/27/闭包/">
+    <link itemprop="mainEntityOfPage" href="http://sangmu.wewithwe.com/2018/11/28/毫秒级从百亿大表任意维度筛选数据，是怎么做到的.../">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="隐久">
@@ -354,7 +357,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">什么是闭包？闭包的优缺点</h2>
+          <h2 class="post-title" itemprop="name headline">毫秒级从百亿大表任意维度筛选数据，是怎么做到的...</h2>
         
 
         <div class="post-meta">
@@ -366,8 +369,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-27T23:55:43+08:00">
-                2018-11-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-28T18:32:39+08:00">
+                2018-11-28
               </time>
             
 
@@ -382,7 +385,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-28T13:49:16+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-28T18:46:52+08:00">
                 2018-11-28
               </time>
             
@@ -401,8 +404,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
+                  <a href="/categories/架构/" itemprop="url" rel="index">
+                    <span itemprop="name">架构</span>
                   </a>
                 </span>
 
@@ -418,7 +421,7 @@
 
           
           
-             <span id="/2018/11/27/闭包/" class="leancloud_visitors" data-flag-title="什么是闭包？闭包的优缺点">
+             <span id="/2018/11/28/毫秒级从百亿大表任意维度筛选数据，是怎么做到的.../" class="leancloud_visitors" data-flag-title="毫秒级从百亿大表任意维度筛选数据，是怎么做到的...">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -480,68 +483,186 @@
       
 
       
-        <p>javascript<br><a href="https://www.cnblogs.com/cxying93/p/6103375.html" target="_blank" rel="noopener">https://www.cnblogs.com/cxying93/p/6103375.html</a></p>
-<h1 id="什么是闭包？闭包的优缺点？"><a href="#什么是闭包？闭包的优缺点？" class="headerlink" title="什么是闭包？闭包的优缺点？"></a><a href="https://www.cnblogs.com/cxying93/p/6103375.html" target="_blank" rel="noopener">什么是闭包？闭包的优缺点？</a></h1><p>闭包（closure）是javascript的一大难点，也是它的特色。很多高级应用都要依靠闭包来实现。</p>
-<p><strong>1、变量作用域</strong></p>
-<p>要理解闭包，首先要理解javascript的特殊的变量作用域。</p>
-<p>变量的作用域无非就两种：全局变量和局部变量。</p>
-<p>javascript语言的特别之处就在于：<span data-type="color" style="color:rgb(0, 0, 0)"><span data-type="background" style="background-color:rgb(255, 204, 153)">函数内部可以直接读取全局变量，但是在函数外部无法读取函数内部的局部变量。</span></span></p>
-<p><span data-type="background" style="background-color:rgb(255, 204, 153)">注意点：在函数内部声明变量的时候，一定要使用var命令。</span>如果不用的话，你实际上声明的是一个全局变量！</p>
-<p><strong>2、如何从外部读取函数内部的局部变量？</strong></p>
-<p>出于种种原因，我们有时候需要获取到函数内部的局部变量。但是，上面已经说过了，正常情况下，这是办不到的！只有通过变通的方法才能实现。</p>
-<p>那就是在函数内部，再定义一个函数。</p>
-<blockquote>
-<p><span data-type="background" style="background-color:rgb(204, 255, 255)">function f1(){</span><br><span data-type="background" style="background-color:rgb(204, 255, 255)">　　　　var n=999;</span><br><span data-type="background" style="background-color:rgb(204, 255, 255)">　　　　function f2(){</span><br><span data-type="background" style="background-color:rgb(204, 255, 255)">　　　　　　alert(n); // 999</span><br><span data-type="background" style="background-color:rgb(204, 255, 255)">　　　　}</span><br><span data-type="background" style="background-color:rgb(204, 255, 255)">　　}</span><br>在上面的代码中，函数f2就被包括在函数f1内部，这时f1内部的所有局部变量，对f2都是可见的。但是反过来就不行，f2内部的局部变量，对f1就是不可见的。</p>
-</blockquote>
-<p>这就是Javascript语言特有的<span data-type="background" style="background-color:rgb(255, 204, 153)">&quot;链式作用域&quot;结构（chain scope）</span>，</p>
-<p>子对象会一级一级地向上寻找所有父对象的变量。所以，父对象的所有变量，对子对象都是可见的，反之则不成立。</p>
-<p>既然f2可以读取f1中的局部变量，那么只要把f2作为返回值，我们不就可以在f1外部读取它的内部变量了吗！</p>
-<p><strong>3、闭包的概念</strong></p>
-<p>上面代码中的f2函数，就是闭包。</p>
-<p>各种专业文献的闭包定义都非常抽象，我的理解是: <span data-type="background" style="background-color:rgb(255, 204, 153)">闭包就是能够读取其他函数内部变量的函数。</span></p>
-<p><span data-type="background" style="background-color:rgb(255, 204, 153)"><span data-type="background" style="background-color:rgb(255, 255, 255)">由于在javascript中，只有函数内部的子函数才能读取局部变量，所以说，</span></span>闭包可以简单理解成“定义在一个函数内部的函数“。</p>
-<p><span data-type="background" style="background-color:rgb(255, 204, 153)"><span data-type="background" style="background-color:rgb(255, 255, 255)">所以，</span></span>在本质上，闭包是将函数内部和函数外部连接起来的桥梁。</p>
-<p><strong> 4、闭包的用途</strong></p>
-<p>闭包可以用在许多地方。它的最大用处有两个，<span data-type="background" style="background-color:rgb(255, 204, 153)">一个是前面提到的可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中，不会在f1调用后被自动清除。</span></p>
-<p>为什么会这样呢？原因就在于f1是f2的父函数，而f2被赋给了一个全局变量，这导致f2始终在内存中，而f2的存在依赖于f1，因此f1也始终在内存中，不会在调用结束后，被垃圾回收机制（garbage collection）回收。</p>
-<p>这段代码中另一个值得注意的地方，就是”nAdd=function(){n+=1}”这一行，首先在nAdd前面没有使用var关键字，因此nAdd是一个全局变量，而不是局部变量。其次，nAdd的值是一个匿名函数（anonymous function），而这个匿名函数本身也是一个闭包，所以nAdd相当于是一个setter，可以在函数外部对函数内部的局部变量进行操作。</p>
-<p><strong>5、使用闭包的注意点</strong></p>
-<p>（1）由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。解决方法是，在退出函数之前，将不使用的局部变量全部删除。</p>
-<p>（2）闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（Public Method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。</p>
-<p><span data-type="color" style="color:rgb(192, 192, 192)"><span data-type="background" style="background-color:rgb(255, 255, 255)">参考文献：</span></span></p>
-<p><span data-type="color" style="color:rgb(192, 192, 192)"><span data-type="background" style="background-color:rgb(255, 255, 255)">　　</span></span><a href="https://www.baidu.com/link?url=wIOdux3T6MbZppYcuQ55MYErvuIo3QmkwlMnFhJ2-S0BwmuJmyUqQSuQc8OudI-HReFTsUNsg6EQCiaumcMjSZOAyDJKIXWrFbkAxHHB98TNpWkNrHdlzm1hmvfeRzTp&amp;wd=&amp;eqid=d5eece060004123a00000003583a30df" target="_blank" rel="noopener">学习Javascript闭包(Closure) - 阮一峰的网络日志</a></p>
-<h2 id="深入理解Java闭包概念"><a href="#深入理解Java闭包概念" class="headerlink" title="深入理解Java闭包概念"></a>深入理解Java闭包概念</h2><p>闭包又称词法闭包<br><a href="https://www.cnblogs.com/ssp2110/p/3797666.html" target="_blank" rel="noopener">https://www.cnblogs.com/ssp2110/p/3797666.html</a></p>
-<p>闭包最早定义为一种包含&lt;环境成分&gt;和&lt;控制成分&gt;的实体.</p>
-<p>解释一：闭包是引用了自由变量的函数，这个被引用的变量将和这个函数一同存在。</p>
-<p>解释二：闭包是函数和相关引用环境组成的实体。</p>
-<p>注：&lt;自由变量&gt;：除了局部变量的其他变量</p>
-<p>简单理解：闭包能够将一个方法作为一个变量去存储，这个方法有能力去访问所在类的自由变量。</p>
-<p>Java中闭包实现</p>
-<p>关键点：</p>
-<p>如何用变量去存储方法？</p>
-<p>java中能够保存方法的变量指的就是普通的对象</p>
-<p>如何让这个普通对象能够访问所在类的自由变量？</p>
-<p>纯天然的解决办法是：内部类。内部类能够访问外部类的所有属性及方法。</p>
-<p>隐藏具体实现是内部类的作用之一，如何保证隐藏具体实现的同时还能将闭包传递到外部使用？</p>
-<p>让内部类实现通用接口，然后将内部类对象向上转型为接口类型。</p>
-<p>上述解决办法就是Java最常用的闭包实现办法（内部类+接口）</p>
-<p>下面提供一个简单的实现</p>
-<p>[java] view plaincopyprint?<br>public class Milk {</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">public final static String name = &quot;纯牛奶&quot;;//名称  </span><br><span class="line">  </span><br><span class="line">private static int num = 16;//数量  </span><br><span class="line">  </span><br><span class="line">public Milk()  </span><br><span class="line">&#123;  </span><br><span class="line">    System.out.println(name+&quot;：16/每箱&quot;);  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">/** </span><br><span class="line"> * 闭包 </span><br><span class="line"> * @return 返回一个喝牛奶的动作 </span><br><span class="line"> */  </span><br><span class="line">public Active HaveMeals()  </span><br><span class="line">&#123;  </span><br><span class="line">    return new Active()  </span><br><span class="line">            &#123;  </span><br><span class="line">                public void drink()  </span><br><span class="line">                &#123;  </span><br><span class="line">                    if(num == 0)  </span><br><span class="line">                    &#123;  </span><br><span class="line">                        System.out.println(&quot;木有了，都被你丫喝完了.&quot;);  </span><br><span class="line">                        return;  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    num--;  </span><br><span class="line">                    System.out.println(&quot;喝掉一瓶牛奶&quot;);  </span><br><span class="line">                &#125;  </span><br><span class="line">            &#125;;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">/** </span><br><span class="line"> * 获取剩余数量 </span><br><span class="line"> */  </span><br><span class="line">public void currentNum()  </span><br><span class="line">&#123;  </span><br><span class="line">    System.out.println(name+&quot;剩余：&quot;+num);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>}</p>
-<p>/**</p>
+        <p>转载自<a href="https://www.jianshu.com/p/47408eb7e6e3" target="_blank" rel="noopener">https://www.jianshu.com/p/47408eb7e6e3</a>【只阅读学习，请勿它用】</p>
+<h3 id="1、业务背景"><a href="#1、业务背景" class="headerlink" title="1、业务背景"></a>1、业务背景</h3><p>随着闲鱼业务的发展，用户规模达到数亿级，用户维度的数据指标，达到上百个之多。如何从亿级别的数据中，快速筛选出符合期望的用户人群，进行精细化人群运营，是技术需要解决的问题。业界的很多方案常常需要分钟级甚至小时级才能生成查询结果。本文提供了一种解决大数据场景下的高效数据筛选、统计和分析方法，从亿级别数据中，任意组合查询条件，筛选需要的数据，做到毫秒级返回。</p>
+<h3 id="2、技术选型分析"><a href="#2、技术选型分析" class="headerlink" title="2、技术选型分析"></a>2、技术选型分析</h3><p>从技术角度分析，我们这个业务场景有如下特点：</p>
+<ol>
+<li>需要支持任意维度的组合(and/or)嵌套查询，且要求低延迟；</li>
+<li>数据规模大，至少亿级别，且需要支持不断扩展；</li>
+<li>单条数据指标维度多，至少上百，且需要支持不断增加；<br> 综合分析，这是一个典型的OLAP场景。</li>
+</ol>
+<h4 id="2-1-OLTP与OLAP"><a href="#2-1-OLTP与OLAP" class="headerlink" title="2.1 OLTP与OLAP"></a>2.1 OLTP与OLAP</h4><p>下面简单对比下OLTP和OLAP：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">OLTP</th>
+<th style="text-align:left">OLAP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">定义</td>
+<td style="text-align:left">联机事务处理</td>
+<td style="text-align:left">联机分析处理</td>
+</tr>
+<tr>
+<td style="text-align:left">应用场景</td>
+<td style="text-align:left">日常业务操作</td>
+<td style="text-align:left">分析决策，报表统计</td>
+</tr>
+<tr>
+<td style="text-align:left">事务要求</td>
+<td style="text-align:left">需要支持事务</td>
+<td style="text-align:left">无需事务支持</td>
+</tr>
+<tr>
+<td style="text-align:left">常用数据操作</td>
+<td style="text-align:left">读/写高并发</td>
+<td style="text-align:left">查询为主，并发要求相对低</td>
+</tr>
+<tr>
+<td style="text-align:left">实时性要求</td>
+<td style="text-align:left">高</td>
+<td style="text-align:left">要求不严格</td>
+</tr>
+<tr>
+<td style="text-align:left">DB大小</td>
+<td style="text-align:left">MB-GB</td>
+<td style="text-align:left">GB-TB</td>
+</tr>
+<tr>
+<td style="text-align:left">数据行数</td>
+<td style="text-align:left">几万到几百万</td>
+<td style="text-align:left">亿级别甚至几十亿上百亿</td>
+</tr>
+<tr>
+<td style="text-align:left">数据列数</td>
+<td style="text-align:left">几十至上百列</td>
+<td style="text-align:left">百级别至千级别</td>
+</tr>
+</tbody>
+</table>
+<p>最常见的数据库，如MySql、Oracle等，都采用行式存储，比较适合OLTP。如果用MySql等行数据库来实现OLAP，一般都会碰到两个瓶颈：</p>
+<ol>
+<li>数据量瓶颈：mysql比较适合的数据量级是百万级，再多的话，查询和写入性能会明显下降。因此，一般会采用分库分表的方式，把数据规模控制在百万级。</li>
+<li>查询效率瓶颈：mysql对于常用的条件查询，需要单独建立索引或组合索引。非索引字段的查询需要扫描全表，性能下降明显。</li>
+</ol>
+<p>综上分析，我们的应用场景，并不适合采用行存储数据库，因此我们重点考虑列存数据库。</p>
+<h4 id="2-2-行式存储与列式存储"><a href="#2-2-行式存储与列式存储" class="headerlink" title="2.2 行式存储与列式存储"></a>2.2 行式存储与列式存储</h4><p>下面简单对比一下行式存储与列式存储的特点：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">行式存储</th>
+<th style="text-align:left">列式存储</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">存储特点</td>
+<td style="text-align:left">同一行数据一起存储</td>
+<td style="text-align:left">同一列数据一起存储</td>
+</tr>
+<tr>
+<td style="text-align:left">读取优点</td>
+<td style="text-align:left">一次性读取整行数据快捷</td>
+<td style="text-align:left">读取单列数据快捷</td>
+</tr>
+<tr>
+<td style="text-align:left">读取缺点</td>
+<td style="text-align:left">单列读取，也需要读取整行数据</td>
+<td style="text-align:left">整行查询，需要重组数据</td>
+</tr>
+<tr>
+<td style="text-align:left">数据更新特点</td>
+<td style="text-align:left">INSERT/UPDATE比较方便</td>
+<td style="text-align:left">INSERT/UPDATE比较麻烦</td>
+</tr>
+<tr>
+<td style="text-align:left">索引</td>
+<td style="text-align:left">需要单独对查询列建索引</td>
+<td style="text-align:left">每一列都可以作为索引</td>
+</tr>
+<tr>
+<td style="text-align:left">压缩特点</td>
+<td style="text-align:left">同一行数据差异大，压缩比率低</td>
+<td style="text-align:left">一列数据由于相似性，压缩比率高</td>
+</tr>
+</tbody>
+</table>
+<p>行存适合近线数据分析，比如要求查询表中某几条符合条件的记录的所有字段的场景。列存适合用于数据的统计分析。考虑如下场景：一个用于存放用户的表中有20个字段，而我们要统计用户年龄的平均值，如果是行存，则要全表扫描，遍历所有行。但如果是列存，数据库只要定位到年龄这一列，然后只扫描这一列的数据就可以得到所有的年龄，计算平均值，性能上相比行存理论上就会快20倍。<br>而在列存数据库中，比较常见的是HBase。HBase应用的核心设计重点是rowkey的设计，一般要把常用的筛选条件，组合设计到rowkey中，通过rowkey的get(单条记录)或者scan(范围)查询。因此HBase比较适合有限查询条件下的非结构化数据存储。而我们的场景，由于所有字段都需要作为筛选条件，所以本质上还是需要结构化存储，且要求查询低延迟，因此也无法使用HBase。<br>我们综合考虑集团内多款列式存储的DB产品(ADS/PostgreSQL/HBase/HybridDB)，综合评估读写性能、稳定性、语法完备程度及开发和部署成本，我们选择了HybridDB for MySQL计算规格来构建人群圈选引擎。</p>
+<h4 id="2-3-HybridDB-for-MySQL计算规格介绍"><a href="#2-3-HybridDB-for-MySQL计算规格介绍" class="headerlink" title="2.3 HybridDB for MySQL计算规格介绍"></a>2.3 HybridDB for MySQL计算规格介绍</h4><p>HybridDB for MySQL计算规格对我们的这个场景而言，核心能力主要有：</p>
+<ol>
+<li>任意维度智能组合索引(使用方无需单独自建索引)</li>
+<li>百亿大表查询毫秒级响应</li>
+<li>MySql BI生态兼容，完备SQL支持</li>
+<li>空间检索、全文检索、复杂数据类型(多值列、JSON)支持</li>
+</ol>
+<p>那么，HybridDB for MySQL计算规格是如何做到大数据场景下的任意维度组合查询的毫秒级响应的呢？</p>
 <ul>
-<li>通用接口<br>  */<br>  interface Active<br>  {<br>  void drink();<br>  }<br>  使用上述实现</li>
+<li>首先是HybridDB的高性能列式存储引擎，内置于存储的谓词计算能力，可以利用各种统计信息快速跳过数据块实现快速筛选；</li>
+<li>第二是HybridDB的智能索引技术，在大宽表上一键自动全索引并根据列索引智能组合出各种谓词条件进行过滤；</li>
+<li>第三是高性能MPP+DAG的融合计算引擎，兼顾高并发和高吞吐两种模式实现了基于pipeline的高性能向量计算，并且计算引擎和存储紧密配合，让计算更快；</li>
+<li>第四是HybridDB支持各种数据建模技术例如星型模型、雪花模型、聚集排序等，业务适度数据建模可以实现更好的性能指标。</li>
 </ul>
-<p>[java] view plaincopyprint?<br>public class Person {</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;  </span><br><span class="line">    //买一箱牛奶  </span><br><span class="line">    Milk m = new Milk();  </span><br><span class="line">      </span><br><span class="line">    Active haveMeals = m.HaveMeals();  </span><br><span class="line">      </span><br><span class="line">    //没事喝一瓶  </span><br><span class="line">    haveMeals.drink();  </span><br><span class="line">    //有事喝一瓶  </span><br><span class="line">    haveMeals.drink();  </span><br><span class="line">      </span><br><span class="line">    //看看还剩多少？  </span><br><span class="line">    m.currentNum();  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>}<br>运行结果</p>
-<p>[java] view plaincopyprint?<br>纯牛奶：16/每箱<br>喝掉一瓶牛奶<br>喝掉一瓶牛奶<br>纯牛奶剩余：14<br>上述例子中，通过调用Active的方法实现对Milk私有变量num进行修改。</p>
-<p>有时候觉得直接使用set方法也可以直接修改private变量，但是从现实生活中来说让人去执行喝牛奶的动作比牛奶自己动手喝来的合理一些。</p>
-<p>总结</p>
-<p>1.实际项目中没怎么用过闭包，因此不能对他的好坏进行评论。</p>
-<p>2.建议合理的使用闭包，不完全不使用，也不能滥用。</p>
-<p>3.特别注意：闭包会导致资源不被回收，如上例，在main方法中将m设为null，使用haveMeals继续调用drink方法仍然会喝掉一瓶牛奶，说明Milk对象并没有被释放掉。</p>
+<p>综合来说，HybridDB for MySQL计算规格是以SQL为中心的多功能在线实时仓库系统，很适合我们的业务场景，因此我们在此之上构建了我们的人群圈选底层引擎。</p>
+<h3 id="3、业务实现"><a href="#3、业务实现" class="headerlink" title="3、业务实现"></a>3、业务实现</h3><p>在搭建了人群圈选引擎之后，我们重点改造了我们的消息推送系统，作为人群精细化运营的一个重要落地点。</p>
+<h4 id="3-1-闲鱼消息推送简介"><a href="#3-1-闲鱼消息推送简介" class="headerlink" title="3.1 闲鱼消息推送简介"></a>3.1 闲鱼消息推送简介</h4><p>消息推送(PUSH)是信息触达用户最快捷的手段。闲鱼比较常用的PUSH方式，是先离线计算好PUSH人群、准备好对应PUSH文案，然后在第二天指定的时间推送。一般都是周期性的PUSH任务。但是临时性的、需要立刻发送、紧急的PUSH任务，就需要BI同学介入，每个PUSH任务平均约需要占用BI同学半天的开发时间，且操作上也比较麻烦。本次我们把人群圈选系统与原有的PUSH系统打通，极大地改善了此类PUSH的准备数据以及发送的效率，解放了开发资源。</p>
+<h4 id="3-2-系统架构"><a href="#3-2-系统架构" class="headerlink" title="3.2 系统架构"></a>3.2 系统架构</h4><p><img src="//upload-images.jianshu.io/upload_images/2509688-4c9f37321de88f2a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="image | left"></p>
+<p>离线数据层：用户维度数据，分散在各个业务系统的离线表中。我们通过离线T+1定时任务，把数据汇总导入到实时计算层的用户大宽表中。</p>
+<p>实时计算层：根据人群的筛选条件，从用户大宽表中，查询符合的用户数量和用户ID列表，为应用系统提供服务。</p>
+<p>人群圈选前台系统：提供可视化的操作界面。运营同学选择筛选条件，保存为人群，用于分析或者发送PUSH。每一个人群，对应一个SQL存储。类似于：<br>select count(*) from user_big_table where column1&gt; 1 and column2 in (‘a’,’b’) and ( column31=1 or column32=2)<br>同时，SQL可以支持任意字段的多层and/or嵌套组合。<br>用SQL保存人群的方式，当用户表中的数据变更时，可以随时执行SQL，获取最新的人群用户，来更新人群。</p>
+<p>闲鱼PUSH系统：从人群圈选前台系统中获取人群对应的where条件，再从实时计算层，分页获取用户列表，给用户发送PUSH。在实现过程中，我们重点解决了分页查询的性能问题。</p>
+<p>分页查询性能优化方案：<br>在分页时，当人群的规模很大(千万级别)时，页码越往后，查询的性能会有明显下降。因此，我们采用把人群数据增加行号、导出到MySql的方式，来提升性能。表结构如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">批次号</th>
+<th style="text-align:left">人群ID</th>
+<th style="text-align:left">行号</th>
+<th style="text-align:left">用户ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1001</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">123</td>
+</tr>
+<tr>
+<td style="text-align:left">1001</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">234</td>
+</tr>
+<tr>
+<td style="text-align:left">1001</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">345</td>
+</tr>
+<tr>
+<td style="text-align:left">1001</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">456</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>批次号：人群每导出一次，就新加一个批次号，批次号为时间戳，递增。</li>
+<li>行号：从1开始递增，每一个批次号对应的行号都是从1到N。</li>
+</ul>
+<p>我们为”人群ID”+”批次号”+”行号”建组合索引，分页查询时，用索引查询的方式替换分页的方式，从而保证大页码时的查询效率。</p>
+<p>另外，为此额外付出的导出数据的开销，得益于HybridDB强大的数据导出能力，数据量在万级别至百万级别，耗时在秒级至几十秒级别。综合权衡之后，采用了本方案。</p>
+<h3 id="4、PUSH系统改造收益"><a href="#4、PUSH系统改造收益" class="headerlink" title="4、PUSH系统改造收益"></a>4、PUSH系统改造收益</h3><p><img src="//upload-images.jianshu.io/upload_images/2509688-9b26c7f570b62508.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="image | left"></p>
+<p>undefined</p>
+<p>人群圈选系统为闲鱼精细化用户运营提供了强有力的底层能力支撑。同时，圈选人群，也可以应用到其他的业务场景，比如首页焦点图定投等需要分层用户运营的场景，为闲鱼业务提供了很大的优化空间。</p>
+<p>本文实现了海量多维度数据中组合查询的秒级返回结果，是一种OLAP场景下的通用技术实现方案。同时介绍了用该技术方案改造原有业务系统的一个应用案例，取得了很好的业务结果，可供类似需求或场景的参考。</p>
+<h3 id="5、未来"><a href="#5、未来" class="headerlink" title="5、未来"></a>5、未来</h3><p>人群圈选引擎中的用户数据，我们目前是T+1导入的。这是考虑到人群相关的指标，变化频率不是很快，且很多指标(比如用户标签)都是离线T+1计算的，因此T+1的数据更新频度是可以接受的。后续我们又基于HybridDB构建了更为强大的商品圈选引擎。闲鱼商品数据相比用户数据，变化更快。一方面用户随时会更新自己的商品，另一方面，由于闲鱼商品单库存(售出即下架)的特性，以及其他原因，商品状态会随时变更。因此我们的选品引擎，应该尽快感知到这些数据的变化，并在投放层面做出实时调整。我们基于HybridDB(存储)和实时计算引擎，构建了更为强大的“马赫”实时选品系统。</p>
+<hr>
 
       
     </div>
@@ -562,7 +683,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://sangmu.wewithwe.com/2018/11/27/闭包/" title="什么是闭包？闭包的优缺点">http://sangmu.wewithwe.com/2018/11/27/闭包/</a>
+    <a href="http://sangmu.wewithwe.com/2018/11/28/毫秒级从百亿大表任意维度筛选数据，是怎么做到的.../" title="毫秒级从百亿大表任意维度筛选数据，是怎么做到的...">http://sangmu.wewithwe.com/2018/11/28/毫秒级从百亿大表任意维度筛选数据，是怎么做到的.../</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -577,9 +698,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/js/" rel="tag"># js</a>
+            <a href="/tags/系统架构/" rel="tag"># 系统架构</a>
           
-            <a href="/tags/闭包/" rel="tag"># 闭包</a>
+            <a href="/tags/云栖社区/" rel="tag"># 云栖社区</a>
           
         </div>
       
@@ -607,8 +728,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/28/HexoEditor/" rel="next" title="HexoEditor">
-                <i class="fa fa-chevron-left"></i> HexoEditor
+              <a href="/2018/11/27/闭包/" rel="next" title="什么是闭包？闭包的优缺点">
+                <i class="fa fa-chevron-left"></i> 什么是闭包？闭包的优缺点
               </a>
             
           </div>
@@ -616,10 +737,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/28/毫秒级从百亿大表任意维度筛选数据，是怎么做到的.../" rel="prev" title="毫秒级从百亿大表任意维度筛选数据，是怎么做到的...">
-                毫秒级从百亿大表任意维度筛选数据，是怎么做到的... <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -848,7 +965,7 @@ var ap = new APlayer({
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是闭包？闭包的优缺点？"><span class="nav-number">1.</span> <span class="nav-text">什么是闭包？闭包的优缺点？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#深入理解Java闭包概念"><span class="nav-number">1.1.</span> <span class="nav-text">深入理解Java闭包概念</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、业务背景"><span class="nav-number">1.</span> <span class="nav-text">1、业务背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、技术选型分析"><span class="nav-number">2.</span> <span class="nav-text">2、技术选型分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-OLTP与OLAP"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 OLTP与OLAP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-行式存储与列式存储"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 行式存储与列式存储</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-HybridDB-for-MySQL计算规格介绍"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 HybridDB for MySQL计算规格介绍</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、业务实现"><span class="nav-number">3.</span> <span class="nav-text">3、业务实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-闲鱼消息推送简介"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 闲鱼消息推送简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-系统架构"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 系统架构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、PUSH系统改造收益"><span class="nav-number">4.</span> <span class="nav-text">4、PUSH系统改造收益</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、未来"><span class="nav-number">5.</span> <span class="nav-text">5、未来</span></a></li></ol></div>
             
 
           </div>
